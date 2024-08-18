@@ -1,45 +1,39 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 body{
     margin: 0;
-    background-color: #000;
-    color: #eee;
+    background-color: var(--background-color);
+    color: var(--text-color);
     font-family: Poppins;
     font-size: 12px;
 }
-a{
-    text-decoration-line: none;
+
+:root {
+    --primary-color: #fee402;
+    --secondary-color: #fdca00;
+    --background-color: #fffed5;
+    --text-color: #fffed5;
+    --link-color: #fffed5;
+    --link-hover-color: #fdca00;
+    --navbar-bg-color: rgba(255, 255, 255, 0.2);
+    --navbar-shadow-color: #0004;
+    --action-btn-bg-color: #1c1c1c;
+    --action-btn-text-color: #fff;
+    --action-btn-hover-color: #fff;
+    --head-title-color: #fee402;
+    --carousel-title-color: #fff;
+    --carousel-pos-color: #e61e1e;
+    --thumbnail-content-color: #fff;
+    --arrow-bg-color: #eee;
+    --arrow-text-color: #fff;
+    --time-color: #fcda00;
+    --dark-color: #111111;
 }
 
-a:hover {
-    border-bottom: #f1683a 2px solid;
-}
+/*Navigation bar*/
 
-.head {
-    position: absolute;
-    top: 15%;
-    left: 20%;
-    z-index: 100;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.head .title {
-    font-size: 6em;
-    font-weight: 700;
-    line-height: 1.3em;
-    color: #f1683a;
-    letter-spacing: 10px;
-    text-shadow: 0 5px 10px #0004;
-}
-.head .slogan {
-    margin-top: -10px;
-    font-size: 3em;
-    font-weight: 600;
-    text-shadow: 0 5px 10px #0004;
-}
-
-header{
+header {
+    position: relative;
+    padding: 0 2rem;
     width: 1140px;
     max-width: 80%;
     margin: auto;
@@ -49,11 +43,145 @@ header{
     position: relative;
     z-index: 100;
 }
-header a{
-    color: #eee;
-    font-size: 1.2em;
-    margin-right: 39px;
+
+header a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1rem;
+    text-shadow: 0 5px 10px #0004;
 }
+
+header a:hover {
+    color: var(--link-hover-color);
+}
+.navbar {
+    width: max-content;
+    height: 45px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 20px;
+    background-color: var(--action-btn-bg-color);
+    backdrop-filter: blur(40px);
+}
+.navbar li {
+    list-style: none;
+}
+
+.navbar .logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-shadow: 0 5px 10px #0004;
+}
+
+
+.navbar .links {
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar a {
+    margin-right: 40px;
+}
+.toggle_btn {
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: none;
+}
+
+
+.action_btn {
+    background-color: var(--secondary-color);
+    color: var(--action-btn-bg-color);
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: scale 0.2 ease;
+    text-shadow: none;
+    box-shadow: 0 5px 10px #0004;
+    width: max-content;
+}
+
+.action_btn:hover {
+    scale: 1.05;
+    color: var(--action-btn-bg-color);
+}
+
+.action_btn:active {
+    scale: 0.95;
+}
+/* DROPDOWN MENU */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    width: 250px;
+    height: 0;
+    background-color: var(--dark-color);
+    color: var(--text-color);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height cubic-bezier(0.175, 0.885, 0.32, 1.275) ;
+    z-index: 3;
+}
+
+.dropdown-menu.open {
+    height: 240px;
+}
+
+.dropdown-menu li {
+    padding: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown-menu .action_btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+/*Somi foundation head*/
+.head {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+    max-width: 80%;
+}
+
+.head .title {
+    width: max-content;
+    font-size: 6em;
+    font-weight: 700;
+    color: var(--head-title-color);
+    letter-spacing: 10px;
+    text-shadow: 0 5px 10px #0004;
+}
+.head .slogan {
+    color: var(--text-color);
+    margin-top: -10px;
+    font-size: 3em;
+    font-weight: 600;
+    text-shadow: 0 5px 10px #0004;
+}
+
 /* carousel */
 .carousel{
     height: 100vh;
@@ -82,11 +210,11 @@ header a{
     transform: translateX(-50%);
     padding-right: 35%;
     box-sizing: border-box;
-    color: #fff;
+    color: var(--text-color);
     text-shadow: 0 5px 10px #0004;
 }
 .carousel .list .item .content .des {
-    font-size: 1.2em;
+    font-size: 1.5em;
 }
 
 .carousel .list .item .title{
@@ -101,7 +229,7 @@ header a{
     line-height: 1.3em;
 }
 .carousel .list .item .pos{
-    color: #f1683a;
+    color: var(--secondary-color);
 }
 .carousel .list .item .buttons{
     margin-top: 10px;
@@ -110,12 +238,14 @@ header a{
 .carousel .list .item .buttons button{
     border: none;
     border-radius: 20px;
-    background-color: #eee;
+    color: var(--text-color);
+    background-color: var(--action-btn-bg-color);
     letter-spacing: 3px;
     padding: 10px;
     cursor: pointer;
     font-family: Poppins;
     font-weight: 500;
+    box-shadow: 0 5px 10px #0004;
 }
 
 /* thumbail */
@@ -141,7 +271,7 @@ header a{
     border-radius: 20px;
 }
 .thumbnail .item .content{
-    color: #fff;
+    color: var(--text-color);
     position: absolute;
     bottom: 10px;
     left: 10px;
@@ -171,13 +301,13 @@ header a{
     border-radius: 50%;
     background-color: #eee4;
     border: none;
-    color: #fff;
+    color: var(--text-color);
     font-family: monospace;
     font-weight: bold;
     transition: .5s;
 }
 .arrows button:hover{
-    background-color: #fff;
+    background-color: var(--text-color);
     color: #000;
 }
 
@@ -288,7 +418,7 @@ header a{
     z-index: 1000;
     width: 0%;
     height: 3px;
-    background-color: #f1683a;
+    background-color: var(--head-title-color);
     left: 0;
     top: 0;
 }
@@ -350,9 +480,9 @@ header a{
         opacity: 0;
     }
 }
-@media screen and (max-width: 678px) {
+/* @media screen and (max-width: 768px) {
     .carousel .list .item .content{
-        top: 25%;
+        top: 40%;
         padding-right: 0;
     }
     .carousel .list .item .content .title{
@@ -366,27 +496,104 @@ header a{
         padding-right: 0px;
     }
     .head {
-        top: 10%;
-        left: 10%;
+        top: 15%;
     }
     .head .title{
-        font-size: 2.5em;
+        font-size: 3em;
         letter-spacing: 0;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
     }
     .head .slogan{
-        font-size: 1.5em;
+        font-size: 2em;
     }
     .carousel .list .item .buttons button {
         letter-spacing: 1px;
-
     }
     .arrows {
         top: 80%;
         left: 15%;
     }
-    /* .thumbnail .item {
+} */
+
+/* @media only screen and (max-width: 600px) {
+    body {
+        font-size: 10px;
+    }
+
+    header a {
+        font-size: 0.9rem;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .timeline {
+        flex-direction: column;
+    }
+
+    .timeline-item {
+        width: 100%;
+    }
+} */
+/* RESPONSIVE DESIGN */
+@media (max-width: 600px) {
+    .navbar .links,
+    .navbar .action_btn {
+        display: none;
+    }
+
+    .toggle_btn {
+        display: block;
+    }
+    .dropdown-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+    .head .title{
+        font-size: 4em;
+        letter-spacing: 0;
+    }
+    .head .slogan{
+        font-size: 2em;
+    }
+    .carousel .list .item .content{
+        /* white-space: normal;
+        word-break: normal; */
+        margin-top: 120px;
+    }
+    .carousel .list .item .title{
+        letter-spacing: 0;
+    }
+    .carousel .list .item .title,
+    .carousel .list .item .pos{
+        font-size: 1.7em;
+        font-weight: bold;
+    }
+    .carousel .list .item .content .des {
+        font-size: 1.2em;
+    }
+    .thumbnail .item{
         width: 100px;
-        height: 190px;
-    } */
+        height: 160px;
+    }
+    .carousel .list .item .buttons button{
+        padding: 6px;
+        letter-spacing: 0;
+        font-weight: 400;
+    }
+    .arrows button{
+        width: 30px;
+        height: 30px;
+    }
 }
+
+
+/* Founder -
+Somi foundation -
+Their work
+The team
+I need good images which have a nice width*/
