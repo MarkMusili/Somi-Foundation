@@ -180,6 +180,8 @@ header a:hover {
     align-items: center;
     padding: 20px;
     grid-auto-flow: row dense;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .second_section .content {
@@ -202,6 +204,8 @@ header a:hover {
     width: 100%;
     align-content: center;
     justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
 }
 .second_section .logo img {
     width: 200px;
@@ -656,6 +660,9 @@ header a:hover {
     .second_section {
         grid-template-columns: 1fr;
     }
+    /* .second_section .logo{
+       width: 100%;
+    } */
     /* .first_section .content {
         width: 100%;
     } */
