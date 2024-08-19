@@ -160,17 +160,21 @@ header a:hover {
     gap: 2em;
     flex-wrap: wrap;
     min-height: 100vh;
+    box-sizing: border-box;
 }
 
 .first_section.content {
     width: 50%;
     font-size: 1.5em;
+    box-sizing: border-box;
+
 }
 .first_section .logo {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 50%;
+    box-sizing: border-box;
 }
 
 .second_section {
@@ -658,34 +662,24 @@ header a:hover {
     .first_section {
         min-height: auto;
     }
-    .second_section {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 768px) {
-    .navbar .links,
-    .navbar .action_btn {
-        display: none;
-    }
-
-    .toggle_btn {
-        display: block;
-    }
-    .dropdown-menu {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 20px;
-    }
-    .first_section {
-        min-height: auto;
-    }
-    .second_section .logo img {
-        max-width: 100%;
+    .first_section .content {
+        padding: 10px;
+        text-align: center;
     }
     .second_section {
         grid-template-columns: 1fr;
+    }
+    .second_section .content {
+        text-align: center;
+    }
+    .first_section .logo img {
+       width: 100%;
+    }
+    .first_section .content, .first_section .logo {
+        width: 100%;
+    }
+    .sixth_section p {
+        font-size: 1em;
+        margin-top: 20px;
     }
 }
