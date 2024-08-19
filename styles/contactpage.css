@@ -27,7 +27,7 @@ header {
     height: 50px;
     display: flex;
     align-items: center;
-    position: fixed;
+    position: relative;
     z-index: 100;
 }
 
