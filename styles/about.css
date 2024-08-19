@@ -169,12 +169,21 @@ header a:hover {
     box-sizing: border-box;
 
 }
+
 .first_section .logo {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 50%;
+    height: auto;
     box-sizing: border-box;
+}
+.first_section .logo img {
+    max-width: 100%;
+    height: auto;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 15px;
 }
 
 .second_section {
