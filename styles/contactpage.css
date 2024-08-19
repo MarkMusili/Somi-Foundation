@@ -20,15 +20,14 @@ body {
 /*Navigation bar*/
 
 header {
-    padding: 0;
-    width: 100%;
-    max-width: 100%;
-    margin: 0;
+    padding: 0 2rem;
+    width: 1144px;
+    max-width: 80%;
+    margin: auto;
     height: 50px;
     display: flex;
     align-items: center;
     position: relative;
-    z-index: 100;
 }
 
 header a {

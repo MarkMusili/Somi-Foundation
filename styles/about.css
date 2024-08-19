@@ -26,7 +26,6 @@ body {
 
 
 header {
-    position: relative;
     padding: 0 2rem;
     width: 1140px;
     max-width: 80%;
@@ -35,7 +34,6 @@ header {
     display: flex;
     align-items: center;
     position: relative;
-    z-index: 100;
 }
 
 header a {

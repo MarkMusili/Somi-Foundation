@@ -32,7 +32,6 @@ body{
 /*Navigation bar*/
 
 header {
-    position: relative;
     padding: 0 2rem;
     width: 1140px;
     max-width: 80%;
