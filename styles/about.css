@@ -210,6 +210,7 @@ header a:hover {
 .second_section .logo img {
     width: 200px;
     height: 300px;
+    max-width: 100%;
     object-fit: cover;
     border-radius: 15px;
 }
@@ -638,7 +639,7 @@ header a:hover {
 
 
 /* RESPONSIVE DESIGN */
-@media (max-width: 600px) {
+@media (max-width: 480px) {
     .navbar .links,
     .navbar .action_btn {
         display: none;
@@ -660,10 +661,31 @@ header a:hover {
     .second_section {
         grid-template-columns: 1fr;
     }
-    /* .second_section .logo{
-       width: 100%;
-    } */
-    /* .first_section .content {
-        width: 100%;
-    } */
+}
+
+@media (max-width: 768px) {
+    .navbar .links,
+    .navbar .action_btn {
+        display: none;
+    }
+
+    .toggle_btn {
+        display: block;
+    }
+    .dropdown-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+    .first_section {
+        min-height: auto;
+    }
+    .second_section .logo img {
+        max-width: 100%;
+    }
+    .second_section {
+        grid-template-columns: 1fr;
+    }
 }
