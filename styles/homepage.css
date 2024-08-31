@@ -501,6 +501,12 @@ header a:hover {
         letter-spacing: 0;
         font-weight: 400;
     }
+    .arrows {
+        top: 90%;
+    }
+    .thumbnail{
+        bottom: 20px;
+    }
     .arrows button{
         width: 30px;
         height: 30px;
