@@ -17,17 +17,14 @@ body {
     --textarea-color: #111111;
 }
 
-/*Navigation bar*/
 
+/*Navigation bar*/
 header {
-    padding: 0 2rem;
-    width: 1144px;
-    max-width: 80%;
-    margin: auto;
-    height: 50px;
     display: flex;
     align-items: center;
-    position: relative;
+    z-index: 100;
+    position: absolute;
+    width: 100%;
 }
 
 header a {
@@ -38,81 +35,61 @@ header a {
 }
 
 header a:hover {
-    color: var(--secondary-color);
-}
-.navbar li {
-    list-style: none;
+    color: var(--link-hover-color);
 }
 .navbar {
-    width: max-content;
-    height: 45px;
-    max-width: 1200px;
     margin: 0 auto;
-    display: flex;
-    align-items: center;
     border-radius: 20px;
-    background-color: var(--text-color);
-    backdrop-filter: blur(40px);
-    gap: 2em;
+    background-color: var(--input-color);
 }
 
-.navbar .logo a {
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-shadow: 0 5px 10px #0004;
+.links {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    padding: 0 40px;
 }
 
-
-.navbar .links {
-    display: flex;
-    gap: 4em;
+.links li {
+    list-style: none;
 }
-
-.toggle_btn {
-    color: var(--text-color);
-    cursor: pointer;
-    font-size: 1.5rem;
-    display: none;
-}
-
 
 .action_btn {
     background-color: var(--secondary-color);
-    color: var(--text-color);
-    padding: 0.5rem 1rem;
-    border: none;
-    outline: none;
+    color: var(--action-btn-bg-color);
     border-radius: 20px;
-    font-size: 0.8rem;
+    padding: 8px;
     font-weight: bold;
     cursor: pointer;
-    transition: scale 0.2 ease;
     text-shadow: none;
     box-shadow: 0 5px 10px #0004;
-    margin: 0 20px;
 }
 
 .action_btn:hover {
-    scale: 1.05;
-    color: var(--text-color);
+    color: var(--action-btn-bg-color);
 }
 
-.action_btn:active {
-    scale: 0.95;
-}
 /* DROPDOWN MENU */
+.toggle_btn {
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.5rem;
+    margin-right: 20px;
+    display: none;
+}
+
 .dropdown-menu {
     display: none;
     position: absolute;
     right: 2rem;
     top: 60px;
-    width: 250px;
     height: 0;
-    background-color: var(--text-color);
+    background-color: var(--action-btn-bg-color);
     color: var(--text-color);
     border-radius: 10px;
     overflow: hidden;
     transition: height cubic-bezier(0.175, 0.885, 0.32, 1.275) ;
+    z-index: 3;
 }
 
 .dropdown-menu.open {
@@ -122,13 +99,8 @@ header a:hover {
 .dropdown-menu li {
     display: flex;
     align-items: center;
-    justify-content: center;
-}
-.dropdown-menu.open a:hover {
-    color: var(--secondary-color);
-}
-.dropdown-menu.open .action_btn:hover {
-    color: var(--text-color);
+    justify-content: space-evenly;
+    padding: 0 80px;
 }
 
 .dropdown-menu .action_btn {
@@ -145,7 +117,7 @@ header a:hover {
     height: 150px;
     width: 100%;
     font-size: 70px;
-    flex-grow: 1;
+    padding-top: 16px;
 }
 
 .form {
