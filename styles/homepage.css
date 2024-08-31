@@ -1,12 +1,12 @@
- @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 body{
     margin: 0;
     padding: 0;
     background-color: var(--background-color);
     color: var(--text-color);
     font-family: Poppins;
-    font-size: 12px;
     overflow: hidden;
+    font-size: 16px;
 }
 
 
@@ -40,13 +40,12 @@ header {
     position: absolute;
     width: 100%;
     top: 4px;
-    height: 40px;
 }
 
 header a {
     text-decoration: none;
     color: var(--text-color);
-    font-size: 1rem;
+
     text-shadow: 0 5px 10px #0004;
 }
 
@@ -89,7 +88,7 @@ header a:hover {
 .toggle_btn {
     color: #fff;
     cursor: pointer;
-    font-size: 1.5rem;
+
     margin-right: 20px;
     display: none;
 }
@@ -139,22 +138,21 @@ header a:hover {
     margin: 0 auto;
     text-align: center;
     width: 100%;
-    /* padding: 0 10px; */
 }
 
 .head .title {
     width: 100%;
-    font-size: 6em;
+    font-size: 89.76px;
     font-weight: 700;
     color: var(--head-title-color);
-    letter-spacing: 10px;
+    letter-spacing: 8px;
     text-shadow: 0 5px 10px #0004;
+    line-height: 1;
 }
 .head .slogan {
     color: var(--text-color);
-    margin-top: -10px;
-    font-size: 3em;
-    font-weight: 600;
+    font-size: 50.52px;
+    font-weight: 500;
     text-shadow: 0 5px 10px #0004;
 }
 
@@ -189,23 +187,19 @@ header a:hover {
     color: var(--text-color);
     text-shadow: 0 5px 10px #0004;
 }
-.carousel .list .item .content .des {
-    font-size: 1.5em;
-}
 
 .carousel .list .item .title{
     font-weight: bold;
     letter-spacing: 10px;
-
+    font-size: 28.43px;
 }
 .carousel .list .item .title,
 .carousel .list .item .pos{
-    font-size: 2em;
-    font-weight: bold;
-    line-height: 1.3em;
+    font-size: 21.33px;
 }
 .carousel .list .item .pos{
     color: var(--secondary-color);
+    font-weight: 600;
 }
 .carousel .list .item .buttons{
     margin-top: 10px;
@@ -219,7 +213,6 @@ header a:hover {
     padding: 8px;
     cursor: pointer;
     font-family: Poppins;
-    font-weight: 500;
     box-shadow: 0 5px 10px #0004;
 }
 
@@ -260,6 +253,7 @@ header a:hover {
 }
 .thumbnail .item .content .description{
     font-weight: 300;
+    font-size: 12px;
 }
 /* arrows */
 .arrows{
@@ -457,11 +451,13 @@ header a:hover {
 }
 /* RESPONSIVE DESIGN */
 @media (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
     .navbar .links,
     .navbar .action_btn {
         display: none;
     }
-
     .toggle_btn {
         display: block;
     }
@@ -473,34 +469,31 @@ header a:hover {
         gap: 20px;
     }
     .head .title{
-        font-size: 4em;
+        font-size: 61.04px;
         letter-spacing: 0;
     }
     .head .slogan{
-        font-size: 2em;
+        font-size: 31.25px;
+    }
+    .toggle_btn {
+        font-size: 20px;
     }
     .carousel .list .item .content{
         top: 65%;
     }
     .carousel .list .item .title{
         letter-spacing: 0;
+        font-size: 20px;
     }
-    .carousel .list .item .title,
     .carousel .list .item .pos{
-        font-size: 1.7em;
-        font-weight: bold;
+        font-size: 18px;
     }
-    .carousel .list .item .content .des {
-        font-size: 1.2em;
+    .carousel .list .item .buttons .button{
+        font-size: 12px;
     }
     .thumbnail .item{
         width: 100px;
         height: 160px;
-    }
-    .carousel .list .item .buttons button{
-        padding: 6px;
-        letter-spacing: 0;
-        font-weight: 400;
     }
     .arrows {
         top: 90%;
@@ -511,6 +504,12 @@ header a:hover {
     .arrows button{
         width: 30px;
         height: 30px;
+    }
+    .thumbnail .item .content .title{
+        font-size: 12.8px;
+    }
+    .thumbnail .item .content .description{
+        font-size: 10.24;
     }
 }
 
