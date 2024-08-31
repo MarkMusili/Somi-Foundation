@@ -28,6 +28,7 @@ header {
     align-items: center;
     z-index: 100;
     position: absolute;
+    width: 100%;
 }
 
 header a {
@@ -613,7 +614,6 @@ header a:hover {
     gap: 1em;
     justify-content: center;
     align-items: center;
-    margin: 0 0 20px 0;
 }
 
 
