@@ -23,8 +23,7 @@ header {
     display: flex;
     align-items: center;
     z-index: 100;
-    position: absolute;
-    width: 100%;
+    background-color: var(--secondary-color);
 }
 
 header a {
@@ -114,10 +113,8 @@ header a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 150px;
     width: 100%;
     font-size: 70px;
-    padding-top: 16px;
 }
 
 .form {
@@ -130,12 +127,12 @@ header a:hover {
 }
 
 .form_inner {
-    width: 70%;
+    width: 60%;
     margin-right: 20px;
 }
 
 .logo {
-    width: 30%;
+    width: 40%;
     margin: 70px 0px 0 10px;
     padding: 26px;
     display: flex;
@@ -145,8 +142,8 @@ header a:hover {
 }
 
 .logo_img {
-    height: 400px;
-    width: 400px;
+    height: 500px;
+    width: 500px;
 }
 
 
