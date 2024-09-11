@@ -259,11 +259,11 @@ button a:hover {
         top: 30%;
     }
 
-    /* h1 {font: var(--h1);}
+    h1 {font: var(--h1);}
     h2 {font: var(--h2);}
     h3 {font: var(--h3);}
     p {font: var(--P);}
-    a {font: var(--P);} */
+    a {font: var(--P);}
 }
 
 
@@ -395,4 +395,12 @@ button a:hover {
 .arrows button:hover {
     background-color: var(--secondary-color);
     color: var(--primary-color);
+}
+@media (max-width: 1024px) {
+    .content {
+        top: 30%;
+    }
+    .arrows {
+        top: 57%;
+    }
 }
