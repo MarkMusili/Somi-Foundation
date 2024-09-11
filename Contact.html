@@ -2,9 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
+    <title>Contact</title>
     <link rel="stylesheet" href="Contact.css">
     <script src="Contact.js" defer></script>
 </head>
@@ -16,20 +15,14 @@
                 <li><a href="Homepage.html">Home</a></li>
                 <li style="display: flex; align-items: center; gap: 8px;">
                     <a href="About.html">About Us</a>
-
-                    <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g id="Chevron Down">
-                    <path id="Vector" fill-rule="evenodd" clip-rule="evenodd" d="M12.3982 16.1634C12.1785 16.3831 11.8224 16.3831 11.6027 16.1634L5.86788 10.4285C5.64821 10.2089 5.64821 9.85276 5.86788 9.63308L6.13305 9.36788C6.35271 9.14821 6.70887 9.14821 6.92854 9.36788L12.0005 14.4398L17.0724 9.36788C17.2921 9.14821 17.6482 9.14821 17.8679 9.36788L18.1331 9.63308C18.3527 9.85276 18.3527 10.2089 18.1331 10.4285L12.3982 16.1634Z" fill="#111111"/>
-                    </g>
-                    </svg>
-
+                    <img style="width: 16px; height: 16px;" src="Images/Dropdown.png" alt="">
                     <ul class="dropdown">
                         <li>
                             <a href="#story">Our Story</a>
                         </li>
-                        <li><a href="#initiatives">What we do</a></li>
-                        <li><a href="#team">The Team</a></li>
-                        <li><a href="#tranding">Gallery</a></li>
+                        <li><a href="About.html#initiatives">What we do</a></li>
+                        <li><a href="About.html#team">The Team</a></li>
+                        <li><a href="About.html#tranding">Gallery</a></li>
                     </ul>
                 </li>
                 <!-- <li style="display: flex; align-items: center; gap: 8px;">
@@ -43,128 +36,135 @@
                     </ul> -->
                 <li style="display: flex; align-items: center; gap: 8px;">
                     <a href="Contact.html">Contact Us</a>
-                    <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g id="Chevron Down">
-                    <path id="Vector" fill-rule="evenodd" clip-rule="evenodd" d="M12.3982 16.1634C12.1785 16.3831 11.8224 16.3831 11.6027 16.1634L5.86788 10.4285C5.64821 10.2089 5.64821 9.85276 5.86788 9.63308L6.13305 9.36788C6.35271 9.14821 6.70887 9.14821 6.92854 9.36788L12.0005 14.4398L17.0724 9.36788C17.2921 9.14821 17.6482 9.14821 17.8679 9.36788L18.1331 9.63308C18.3527 9.85276 18.3527 10.2089 18.1331 10.4285L12.3982 16.1634Z" fill="#111111"/>
-                    </g>
-                    </svg>
-
+                    <img style="width: 16px; height: 16px;" src="Images/Dropdown.png" alt="">
                     <ul class="dropdown">
-                        <li><a href="#form">Contact Form</a></li>
-                        <li><a href="#info">Contact Information</a></li>
+                        <li><a href="Contact.html#form">Contact Form</a></li>
+                        <li><a href="Contact.html#info">Contact Information</a></li>
                     </ul>
                 </li>
             </ul>
             <button>
-                <a href="Contact.html">Join Us</a>
+                <a href="#">Join Us</a>
             </button>
         </nav>
-        <div class="toggle-button"id="toggle-btn">
+        <div class="toggle-button" id="toggle-btn">
             <span class="bar"></span>
             <span class="bar"></span>
             <span class="bar"></span>
         </div>
     </header>
-    <section  id="form" class="section contact-form">
-        <div class="content">
-            <div class="content-text">
-                <h4>Get in touch</h4>
-                <h2>Contact Us</h2>
-                <p>Have a question, want to collaborate, want to partner with us, or simply want to learn more about Somi Foundation? We’d love to hear from you! Fill out the form below, and we’ll get back to you as soon as possible.</p>
+    <main>
+        <section id="form" class="section contact-form">
+            <div class="container container-form">
+                <div class="content-text">
+                    <h4>Get in touch</h4>
+                    <h2>Contact Us</h2>
+                    <p>Have a question, want to collaborate, want to partner with us, or simply want to learn more about Somi Foundation? We’d love to hear from you! Fill out the form below, and we’ll get back to you as soon as possible.</p>
+                </div>
+                <div class="content-form">
+                    <form action="https://api.web3forms.com/submit" id="form" method="POST">
+                        <input type="hidden" name="access_key" value="b144e86c-d53b-4b94-a04d-18f3e4c066f0">
+                        <input type="hidden" name="subject" value="New Submission from Somi Foundation">
+                        <input type="hidden" name="from_name" value="Somi Foundation">
+                        <input type="hidden" name="subject" value="New Submission from Somi foundation">
+                        <input type="checkbox" name="botcheck" id="" style="display: none;">
+
+                        <label for="name">Name</label>
+                        <input type="text" id="first-input" name="name" placeholder="Your name" required>
+                        <label for="email">Email</label>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <label for="message">Message</label>
+                        <textarea name="message" placeholder="Your message" required></textarea>
+
+                        <button type="submit">Submit</button>
+                        <div id="result"></div>
+                    </form>
+                </div>
             </div>
-            <div class="content-form">
-                <form action="https://api.web3forms.com/submit" id="form" method="POST">
-
-                    <input type="hidden" name="access_key" value="b144e86c-d53b-4b94-a04d-18f3e4c066f0">
-                    <input type="hidden" name="subject" value="New Submission from Somi Foundation">
-                    <input type="hidden" name="from_name" value="Somi Foundation">
-                    <input type="hidden" name="subject" value="New Submission from Somi foundation">
-                    <input type="checkbox" name="botcheck" id="" style="display: none;">
-
-                    <label for="name">Name</label>
-                    <input type="text" id="first-input" name="name" placeholder="Your name" required>
-                    <label for="email">Email</label>
-                    <input type="email" name="email" placeholder="Your Email" required>
-                    <label for="message">Message</label>
-                    <textarea name="message" placeholder="Your message" required></textarea>
-
-                    <button type="submit">Submit</button>
-                    <div id="result"></div>
-                </form>
+            <div class="container">
+                <img src="Images/Slide9.png" alt="">
             </div>
-        </div>
-        <div class="content">
-            <img src="Images/Slide9.png" alt="">
-        </div>
-    </section>
-    <section id="info" class="section contact-info">
-        <div class="contact-info-head">
-            <h2>Contact Information</h2>
-            <p>We’d love to connect with you on any platform. Whether you have questions, want to collaborate, or simply follow our journey, here’s how you can reach us:</p>
-        </div>
-        <div class="contact-info-body">
-            <div class="info-card">
-                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g id="Icon / envelope">
-                    <path id="icon" d="M40 8H8C5.794 8 4 9.794 4 12V36C4 38.206 5.794 40 8 40H40C42.206 40 44 38.206 44 36V12C44 9.794 42.206 8 40 8ZM40 12V13.022L24 25.468L8 13.024V12H40ZM8 36V18.088L22.772 29.578C23.1222 29.8531 23.5547 30.0026 24 30.0026C24.4453 30.0026 24.8778 29.8531 25.228 29.578L40 18.088L40.004 36H8Z" fill="#111111"/>
-                    </g>
+        </section>
+        <section id="info" class="section contact-info">
+            <div class="contact-info-head">
+                <h2>Contact Information</h2>
+                <p>We’d love to connect with you on any platform. Whether you have questions, want to collaborate, or simply follow our journey, here’s how you can reach us:</p>
+            </div>
+            <div class="contact-info-body">
+                <div class="info-card">
+                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="Icon / envelope">
+                        <path id="icon" d="M40 8H8C5.794 8 4 9.794 4 12V36C4 38.206 5.794 40 8 40H40C42.206 40 44 38.206 44 36V12C44 9.794 42.206 8 40 8ZM40 12V13.022L24 25.468L8 13.024V12H40ZM8 36V18.088L22.772 29.578C23.1222 29.8531 23.5547 30.0026 24 30.0026C24.4453 30.0026 24.8778 29.8531 25.228 29.578L40 18.088L40.004 36H8Z" fill="#111111"/>
+                        </g>
+                        </svg>
+                    <h3>Email</h3>
+                    <p>For general inquiries or partnership opportunities, feel free to email us.</p>
+                    <a href="mailto:somifounation@gmail.com">somifounation@gmail.com</a>
+                </div>
+                <div class="info-card">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48" height="48" viewBox="0 0 30 30">
+                        <path d="M 9.9980469 3 C 6.1390469 3 3 6.1419531 3 10.001953 L 3 20.001953 C 3 23.860953 6.1419531 27 10.001953 27 L 20.001953 27 C 23.860953 27 27 23.858047 27 19.998047 L 27 9.9980469 C 27 6.1390469 23.858047 3 19.998047 3 L 9.9980469 3 z M 22 7 C 22.552 7 23 7.448 23 8 C 23 8.552 22.552 9 22 9 C 21.448 9 21 8.552 21 8 C 21 7.448 21.448 7 22 7 z M 15 9 C 18.309 9 21 11.691 21 15 C 21 18.309 18.309 21 15 21 C 11.691 21 9 18.309 9 15 C 9 11.691 11.691 9 15 9 z M 15 11 A 4 4 0 0 0 11 15 A 4 4 0 0 0 15 19 A 4 4 0 0 0 19 15 A 4 4 0 0 0 15 11 z"></path>
                     </svg>
-                <h3>Email</h3>
-                <p>For general inquiries or partnership opportunities, feel free to email us.</p>
-                <a href="mailto:somifounation@gmail.com">somifounation@gmail.com</a>
+                    <h3>Instagram</h3>
+                    <p>Follow us on Instagram to stay updated on our latest initiatives and activities.</p>
+                    <a href="https://www.instagram.com/somi_foundation_/">somifounation</a>
+                </div>
+                <div class="info-card">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48" height="48" viewBox="0 0 50 50">
+                        <path d="M41,4H9C6.243,4,4,6.243,4,9v32c0,2.757,2.243,5,5,5h32c2.757,0,5-2.243,5-5V9C46,6.243,43.757,4,41,4z M37.006,22.323 c-0.227,0.021-0.457,0.035-0.69,0.035c-2.623,0-4.928-1.349-6.269-3.388c0,5.349,0,11.435,0,11.537c0,4.709-3.818,8.527-8.527,8.527 s-8.527-3.818-8.527-8.527s3.818-8.527,8.527-8.527c0.178,0,0.352,0.016,0.527,0.027v4.202c-0.175-0.021-0.347-0.053-0.527-0.053 c-2.404,0-4.352,1.948-4.352,4.352s1.948,4.352,4.352,4.352s4.527-1.894,4.527-4.298c0-0.095,0.042-19.594,0.042-19.594h4.016 c0.378,3.591,3.277,6.425,6.901,6.685V22.323z"></path>
+                    </svg>
+                    <h3>TikTok</h3>
+                    <p>Join us on TikTok for behind-the-scenes content, fun clips, and impactful stories from the community.</p>
+                    <a href="https://www.tiktok.com/@somi.foundation">somifoundation</a>
+                </div>
+                <div class="info-card">
+                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="Icon / map">
+                        <g id="icon">
+                        <path d="M24.0001 28C28.4121 28 32.0001 24.412 32.0001 20C32.0001 15.588 28.4121 12 24.0001 12C19.5881 12 16.0001 15.588 16.0001 20C16.0001 24.412 19.5881 28 24.0001 28ZM24.0001 16C26.2061 16 28.0001 17.794 28.0001 20C28.0001 22.206 26.2061 24 24.0001 24C21.7941 24 20.0001 22.206 20.0001 20C20.0001 17.794 21.7941 16 24.0001 16ZM22.8402 43.628C23.1787 43.8697 23.5842 43.9997 24.0002 43.9997C24.4161 43.9997 24.8217 43.8697 25.1602 43.628C25.7682 43.198 40.0582 32.88 40.0002 20C40.0002 11.178 32.8222 4 24.0002 4C15.1782 4 8.00018 11.178 8.00018 19.99C7.94218 32.88 22.2322 43.198 22.8402 43.628ZM24.0002 8C30.6182 8 36.0002 13.382 36.0002 20.01C36.0422 28.886 27.2242 36.856 24.0002 39.47C20.7782 36.854 11.9582 28.882 12.0002 20C12.0002 13.382 17.3822 8 24.0002 8Z" fill="#111111"/>
+                        <path d="M24.0001 28C28.4121 28 32.0001 24.412 32.0001 20C32.0001 15.588 28.4121 12 24.0001 12C19.5881 12 16.0001 15.588 16.0001 20C16.0001 24.412 19.5881 28 24.0001 28ZM24.0001 16C26.2061 16 28.0001 17.794 28.0001 20C28.0001 22.206 26.2061 24 24.0001 24C21.7941 24 20.0001 22.206 20.0001 20C20.0001 17.794 21.7941 16 24.0001 16ZM22.8402 43.628C23.1787 43.8697 23.5842 43.9997 24.0002 43.9997C24.4161 43.9997 24.8217 43.8697 25.1602 43.628C25.7682 43.198 40.0582 32.88 40.0002 20C40.0002 11.178 32.8222 4 24.0002 4C15.1782 4 8.00018 11.178 8.00018 19.99C7.94218 32.88 22.2322 43.198 22.8402 43.628ZM24.0002 8C30.6182 8 36.0002 13.382 36.0002 20.01C36.0422 28.886 27.2242 36.856 24.0002 39.47C20.7782 36.854 11.9582 28.882 12.0002 20C12.0002 13.382 17.3822 8 24.0002 8Z" fill="#111111"/>
+                        </g>
+                        </g>
+                    </svg>
+                    <h3>Location</h3>
+                    <p>Kenya, Nairobi
+                        Imara Daima.
+                    </p>
+                    <a href="#">P.O.BOX 1234</a>
+                </div>
             </div>
-            <div class="info-card">
-                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48" height="48" viewBox="0 0 30 30">
-                    <path d="M 9.9980469 3 C 6.1390469 3 3 6.1419531 3 10.001953 L 3 20.001953 C 3 23.860953 6.1419531 27 10.001953 27 L 20.001953 27 C 23.860953 27 27 23.858047 27 19.998047 L 27 9.9980469 C 27 6.1390469 23.858047 3 19.998047 3 L 9.9980469 3 z M 22 7 C 22.552 7 23 7.448 23 8 C 23 8.552 22.552 9 22 9 C 21.448 9 21 8.552 21 8 C 21 7.448 21.448 7 22 7 z M 15 9 C 18.309 9 21 11.691 21 15 C 21 18.309 18.309 21 15 21 C 11.691 21 9 18.309 9 15 C 9 11.691 11.691 9 15 9 z M 15 11 A 4 4 0 0 0 11 15 A 4 4 0 0 0 15 19 A 4 4 0 0 0 19 15 A 4 4 0 0 0 15 11 z"></path>
-                </svg>
-                <h3>Instagram</h3>
-                <p>Follow us on Instagram to stay updated on our latest initiatives and activities.</p>
-                <a href="https://www.instagram.com/somi_foundation_/">somifounation</a>
-            </div>
-            <div class="info-card">
-                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48" height="48" viewBox="0 0 50 50">
-                    <path d="M41,4H9C6.243,4,4,6.243,4,9v32c0,2.757,2.243,5,5,5h32c2.757,0,5-2.243,5-5V9C46,6.243,43.757,4,41,4z M37.006,22.323 c-0.227,0.021-0.457,0.035-0.69,0.035c-2.623,0-4.928-1.349-6.269-3.388c0,5.349,0,11.435,0,11.537c0,4.709-3.818,8.527-8.527,8.527 s-8.527-3.818-8.527-8.527s3.818-8.527,8.527-8.527c0.178,0,0.352,0.016,0.527,0.027v4.202c-0.175-0.021-0.347-0.053-0.527-0.053 c-2.404,0-4.352,1.948-4.352,4.352s1.948,4.352,4.352,4.352s4.527-1.894,4.527-4.298c0-0.095,0.042-19.594,0.042-19.594h4.016 c0.378,3.591,3.277,6.425,6.901,6.685V22.323z"></path>
-                </svg>
-                <h3>TikTok</h3>
-                <p>Join us on TikTok for behind-the-scenes content, fun clips, and impactful stories from the community.</p>
-                <a href="https://www.tiktok.com/@somi.foundation">somifoundation</a>
-            </div>
-            <div class="info-card">
-                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g id="Icon / map">
-                    <g id="icon">
-                    <path d="M24.0001 28C28.4121 28 32.0001 24.412 32.0001 20C32.0001 15.588 28.4121 12 24.0001 12C19.5881 12 16.0001 15.588 16.0001 20C16.0001 24.412 19.5881 28 24.0001 28ZM24.0001 16C26.2061 16 28.0001 17.794 28.0001 20C28.0001 22.206 26.2061 24 24.0001 24C21.7941 24 20.0001 22.206 20.0001 20C20.0001 17.794 21.7941 16 24.0001 16ZM22.8402 43.628C23.1787 43.8697 23.5842 43.9997 24.0002 43.9997C24.4161 43.9997 24.8217 43.8697 25.1602 43.628C25.7682 43.198 40.0582 32.88 40.0002 20C40.0002 11.178 32.8222 4 24.0002 4C15.1782 4 8.00018 11.178 8.00018 19.99C7.94218 32.88 22.2322 43.198 22.8402 43.628ZM24.0002 8C30.6182 8 36.0002 13.382 36.0002 20.01C36.0422 28.886 27.2242 36.856 24.0002 39.47C20.7782 36.854 11.9582 28.882 12.0002 20C12.0002 13.382 17.3822 8 24.0002 8Z" fill="#111111"/>
-                    <path d="M24.0001 28C28.4121 28 32.0001 24.412 32.0001 20C32.0001 15.588 28.4121 12 24.0001 12C19.5881 12 16.0001 15.588 16.0001 20C16.0001 24.412 19.5881 28 24.0001 28ZM24.0001 16C26.2061 16 28.0001 17.794 28.0001 20C28.0001 22.206 26.2061 24 24.0001 24C21.7941 24 20.0001 22.206 20.0001 20C20.0001 17.794 21.7941 16 24.0001 16ZM22.8402 43.628C23.1787 43.8697 23.5842 43.9997 24.0002 43.9997C24.4161 43.9997 24.8217 43.8697 25.1602 43.628C25.7682 43.198 40.0582 32.88 40.0002 20C40.0002 11.178 32.8222 4 24.0002 4C15.1782 4 8.00018 11.178 8.00018 19.99C7.94218 32.88 22.2322 43.198 22.8402 43.628ZM24.0002 8C30.6182 8 36.0002 13.382 36.0002 20.01C36.0422 28.886 27.2242 36.856 24.0002 39.47C20.7782 36.854 11.9582 28.882 12.0002 20C12.0002 13.382 17.3822 8 24.0002 8Z" fill="#111111"/>
-                    </g>
-                    </g>
-                </svg>
-                <h3>Location</h3>
-                <p>Kenya, Nairobi
-                    Imara Daima.
-                </p>
-                <a href="#">P.O.BOX 1234</a>
-            </div>
-        </div>
-    </section>
-    <!-- <footer id="#footer" class="footer">
+        </section>
+
+
+    </main>
+    <footer id="#footer" class="footer">
         <h2>SOMI</h2>
         <ul>
-            <li><a href="Homepage.html">Home</a></li>
-            <li><a href="About.css">About Us</a></li>
+            <li><a href="">Home</a></li>
+            <li><a href="">About Us</a></li>
             <li><a href="">Get Involved</a></li>
             <li><a href="">Contact Us</a></li>
         </ul>
         <div class="social-links">
-            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="28" height="28" viewBox="0 0 50 50">
-                <path d="M41,4H9C6.24,4,4,6.24,4,9v32c0,2.76,2.24,5,5,5h32c2.76,0,5-2.24,5-5V9C46,6.24,43.76,4,41,4z M17,20v19h-6V20H17z M11,14.47c0-1.4,1.2-2.47,3-2.47s2.93,1.07,3,2.47c0,1.4-1.12,2.53-3,2.53C12.2,17,11,15.87,11,14.47z M39,39h-6c0,0,0-9.26,0-10 c0-2-1-4-3.5-4.04h-0.08C27,24.96,26,27.02,26,29c0,0.91,0,10,0,10h-6V20h6v2.56c0,0,1.93-2.56,5.81-2.56 c3.97,0,7.19,2.73,7.19,8.26V39z"></path>
-            </svg></a>
-            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="28" height="28" viewBox="0 0 50 50">
-                <path d="M 11 4 C 7.134 4 4 7.134 4 11 L 4 39 C 4 42.866 7.134 46 11 46 L 39 46 C 42.866 46 46 42.866 46 39 L 46 11 C 46 7.134 42.866 4 39 4 L 11 4 z M 13.085938 13 L 21.023438 13 L 26.660156 21.009766 L 33.5 13 L 36 13 L 27.789062 22.613281 L 37.914062 37 L 29.978516 37 L 23.4375 27.707031 L 15.5 37 L 13 37 L 22.308594 26.103516 L 13.085938 13 z M 16.914062 15 L 31.021484 35 L 34.085938 35 L 19.978516 15 L 16.914062 15 z"></path>
-            </svg></a>
+            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="28" height="28"
+                    viewBox="0 0 50 50">
+                    <path
+                        d="M41,4H9C6.24,4,4,6.24,4,9v32c0,2.76,2.24,5,5,5h32c2.76,0,5-2.24,5-5V9C46,6.24,43.76,4,41,4z M17,20v19h-6V20H17z M11,14.47c0-1.4,1.2-2.47,3-2.47s2.93,1.07,3,2.47c0,1.4-1.12,2.53-3,2.53C12.2,17,11,15.87,11,14.47z M39,39h-6c0,0,0-9.26,0-10 c0-2-1-4-3.5-4.04h-0.08C27,24.96,26,27.02,26,29c0,0.91,0,10,0,10h-6V20h6v2.56c0,0,1.93-2.56,5.81-2.56 c3.97,0,7.19,2.73,7.19,8.26V39z">
+                    </path>
+                </svg></a>
+            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="28" height="28"
+                    viewBox="0 0 50 50">
+                    <path
+                        d="M 11 4 C 7.134 4 4 7.134 4 11 L 4 39 C 4 42.866 7.134 46 11 46 L 39 46 C 42.866 46 46 42.866 46 39 L 46 11 C 46 7.134 42.866 4 39 4 L 11 4 z M 13.085938 13 L 21.023438 13 L 26.660156 21.009766 L 33.5 13 L 36 13 L 27.789062 22.613281 L 37.914062 37 L 29.978516 37 L 23.4375 27.707031 L 15.5 37 L 13 37 L 22.308594 26.103516 L 13.085938 13 z M 16.914062 15 L 31.021484 35 L 34.085938 35 L 19.978516 15 L 16.914062 15 z">
+                    </path>
+                </svg></a>
             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="28" height="28" viewBox="0 0 50 50">
-                <path d="M41,4H9C6.243,4,4,6.243,4,9v32c0,2.757,2.243,5,5,5h32c2.757,0,5-2.243,5-5V9C46,6.243,43.757,4,41,4z M37.006,22.323 c-0.227,0.021-0.457,0.035-0.69,0.035c-2.623,0-4.928-1.349-6.269-3.388c0,5.349,0,11.435,0,11.537c0,4.709-3.818,8.527-8.527,8.527 s-8.527-3.818-8.527-8.527s3.818-8.527,8.527-8.527c0.178,0,0.352,0.016,0.527,0.027v4.202c-0.175-0.021-0.347-0.053-0.527-0.053 c-2.404,0-4.352,1.948-4.352,4.352s1.948,4.352,4.352,4.352s4.527-1.894,4.527-4.298c0-0.095,0.042-19.594,0.042-19.594h4.016 c0.378,3.591,3.277,6.425,6.901,6.685V22.323z"></path>
+                <path
+                    d="M41,4H9C6.243,4,4,6.243,4,9v32c0,2.757,2.243,5,5,5h32c2.757,0,5-2.243,5-5V9C46,6.243,43.757,4,41,4z M37.006,22.323 c-0.227,0.021-0.457,0.035-0.69,0.035c-2.623,0-4.928-1.349-6.269-3.388c0,5.349,0,11.435,0,11.537c0,4.709-3.818,8.527-8.527,8.527 s-8.527-3.818-8.527-8.527s3.818-8.527,8.527-8.527c0.178,0,0.352,0.016,0.527,0.027v4.202c-0.175-0.021-0.347-0.053-0.527-0.053 c-2.404,0-4.352,1.948-4.352,4.352s1.948,4.352,4.352,4.352s4.527-1.894,4.527-4.298c0-0.095,0.042-19.594,0.042-19.594h4.016 c0.378,3.591,3.277,6.425,6.901,6.685V22.323z">
+                </path>
             </svg>
+
         </div>
-    </footer> -->
+    </footer>
 </body>
 </html>

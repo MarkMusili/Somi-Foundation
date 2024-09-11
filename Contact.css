@@ -25,18 +25,14 @@ p {font: var(--P);}
 a {font: var(--P);}
 h4 {font: var(--H4);}
 h5 {font: var(--H5);}
-
 small {font: var(--small);}
-
-
-h1, h2, h3, h4, h5, h6, p small {
-    margin: 0;
-}
+label {font: var(--P);}
 
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
+}
+h1, h2, h3, h4, h5, h6, p small {
+    margin: 0;
 }
 
 body {
@@ -44,8 +40,28 @@ body {
     color: var(--primary-color);
     background-color: var(--secondary-color);
     scroll-behavior: smooth;
+    font-size: 62.5%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
 }
 
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    padding: 0 64px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--secondary-color);
+    border-bottom: 1px solid var(--primary-color);
+    z-index: 1000;
+}
+header h3 {
+    color: var(--accent-color);
+}
 a {
     text-decoration: none;
     cursor: pointer;
@@ -55,55 +71,35 @@ a {
 a:hover {
     color: var(--accent-color);
 }
-header {
-    display: flex;
-    height: 72px;
-    /* min-width: 100vw; */
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 64px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: var(--secondary-color);
-    align-self: stretch;
-    z-index: 1000;
-    border-bottom: 1px solid var(--primary-color);
-}
-
-header h3 {
-    color: var(--accent-color);
-}
-
 nav {
-    display: contents;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 }
 ul{
     display: flex;
+    justify-content: center;
+    flex: 1;
     align-items: center;
     gap: 32px;
     list-style: none;
+    padding: 0;
 }
-ul li {
-    position: relative;
-}
-
 ul .dropdown {
     display: none;
     position: absolute;
     top: 100%;
     left: 0;
-    /* background-color: white; */
     backdrop-filter: blur(16px) saturate(180%);
     -webkit-backdrop-filter: blur(16px) saturate(180%);
     background-color: rgba(17, 25, 40, 0.50);
     border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.125);
     list-style: none;
     z-index: 2;
 }
-
+ul li {
+    position: relative;
+}
 ul .dropdown li {
     width: 200px;
 }
@@ -118,20 +114,24 @@ ul .dropdown li a {
 ul .dropdown li a:hover {
     background-color: var(--accent-color);
     color: var(--primary-color);
-
 }
 
 ul li:hover .dropdown {
     display: block;
 }
-
-button {
-    display: flex;
+header button {
     padding: 12px 20px;
-    justify-content: center;
-    align-items: center;
     border: none;
     background: var(--accent-color);
+    margin-left: auto;
+    white-space: nowrap;
+}
+button {
+    padding: 12px 20px;
+    border: none;
+    background: var(--accent-color);
+    margin-left: auto;
+    white-space: nowrap;
 }
 
 button:hover {
@@ -143,7 +143,6 @@ button a {
 button a:hover {
     color: var(--primary-color);
 }
-
 .toggle-button {
     display: none;
     cursor: pointer;
@@ -159,6 +158,7 @@ button a:hover {
     margin: 5px auto;
     transition: var(--transition);
 }
+
 /* Ensure that the nav is hidden on smaller screens */
 @media (max-width: 768px){
     nav{
@@ -180,14 +180,18 @@ button a:hover {
         flex-direction: column;
     }
 
+    header button {
+        margin-left: unset;
+    }
     .toggle-button {
         display: block;
         cursor: pointer;
         position: absolute;
-        top: 24px;
         right: 24px;
     }
-
+    header {
+        padding: 0 24px;
+    }
     .bar {
         width: 24px;
         height: 3px;
@@ -214,17 +218,16 @@ button a:hover {
     }
 
     ul li:hover .dropdown {
-        display: none; /* Disable hover effect on small screens */
+        display: none;
     }
 
     ul li.active .dropdown {
         display: block;
     }
-    /* h1 {font: var(--h1);}
-    h2 {font: var(--h2);}
-    h3 {font: var(--h3);}
-    p {font: var(--P);}
-    a {font: var(--P);} */
+}
+main {
+    margin-top: 40px;
+    width: 100vw;
 }
 .section {
     display: flex;
@@ -232,24 +235,33 @@ button a:hover {
     flex-direction: column;
     align-items: center;
     gap: 80px;
-    overflow: hidden;
 }
-.content {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 32px;
-    max-width: 50%;
-}
+
 .contact-form {
     flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.container {
+    flex: 1;
+}
+.container-form {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: stretch;
+    flex-wrap: nowrap;
+}
+.container-form,
+.container img {
+    flex: 1;
+    margin: 0;
 }
 form {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 16px;
-    width: 592px;
 }
 input {
     align-self: stretch;
@@ -283,6 +295,7 @@ input, textarea {
     display: flex;
     gap: 48px;
     align-items: flex-start;
+    max-width: 100%;
 }
 .info-card {
     display: flex;
@@ -295,14 +308,16 @@ input, textarea {
 .info-card a {
     color: var(--accent-color);
 }
-.content img {
+.container img {
     width: 100%;
     height: auto;
-    border-radius: 12px;
+    border-radius: 20px;
     object-fit: cover;
 }
+.section button {
+    margin-left: unset;
+}
 .footer {
-    height: max-content;
     background-color: var(--primary-color);
     display: flex;
     flex-direction: column;
@@ -312,7 +327,6 @@ input, textarea {
 }
 .footer h2 {
     color: var(--accent-color);
-    margin: 20px;
 }
 .footer a {
     color: var(--secondary-color);
@@ -320,6 +334,14 @@ input, textarea {
 .footer a:hover {
     color: var(--accent-color);
 }
-button {
-    font: var(--p);
+@media (max-width:768px) {
+    .container img {
+        display: none;
+    }
+    .container {
+        flex: unset;
+    }
+    .contact-info-body {
+        flex-direction: column;
+    }
 }

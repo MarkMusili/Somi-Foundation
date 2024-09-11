@@ -213,7 +213,7 @@ button a:hover {
 
     /* Ensure dropdowns open on click/touch in small screens */
     ul .dropdown {
-        display: block;
+        display: none;
     }
 
     ul li:hover .dropdown {
