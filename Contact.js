@@ -1,29 +1,4 @@
-
-
 document.addEventListener('DOMContentLoaded', function() {
-    const toggleBtn = document.querySelector('.toggle_btn');
-    const toggleBtnIcon = document.querySelector('.toggle_btn i');
-    const dropDownMenu = document.querySelector('.dropdown-menu');
-
-    toggleBtn.onclick = function () {
-    dropDownMenu.classList.toggle('open');
-    const isOpen = dropDownMenu.classList.contains('open');
-
-    toggleBtnIcon.className = isOpen
-        ? 'fa-solid fa-xmark'
-        : 'fa-solid fa-bars';
-    };
-
-    const form = document.getElementById('form');``
-    const result = document.getElementById('result');
-    const firstInput = document.getElementById('first-input');
-
-    firstInput.addEventListener('focus', function() {
-        document.getElementById('form').scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-
     form.addEventListener('submit', function(e) {
     e.preventDefault();
     const formData = new FormData(form);
@@ -63,4 +38,17 @@ document.addEventListener('DOMContentLoaded', function() {
         // Reset the form fields when the page loads
         document.getElementById("form").reset();
     };
+});
+document.addEventListener('DOMContentLoaded', () => {
+    const toggleButton = document.getElementById('toggle-btn');
+    const navList = document.getElementById('nav-list');
+
+    toggleButton.addEventListener('click', () => {
+        // Toggle active class to change button appearance
+        toggleButton.classList.toggle('active');
+
+        // Toggle the show class to make the navigation visible
+        navList.classList.toggle('show');
+
+});
 });
