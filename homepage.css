@@ -328,6 +328,11 @@ button a:hover {
     /* z-index: 1; */
     box-sizing: border-box;
 }
+@media (max-width: 425px) {
+    .content {
+        top: 50%;
+    }
+}
 
 .buttons {
     display: flex;
@@ -371,12 +376,13 @@ button a:hover {
 
 .arrows {
     position: fixed;
-    bottom: 0;
+    bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     gap: 12px;
 }
+
 
 .arrows button {
     width: 40px;
