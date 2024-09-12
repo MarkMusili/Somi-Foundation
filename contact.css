@@ -316,7 +316,9 @@ input, textarea {
 }
 .section button {
     margin-left: unset;
+    font: var(--p);
 }
+
 .footer {
     background-color: var(--primary-color);
     display: flex;
