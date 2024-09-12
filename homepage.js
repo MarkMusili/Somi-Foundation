@@ -23,14 +23,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let autoSlideInterval = setInterval(() => {
         next.click();
-    }, 10000);
+    }, 17000);
 
     // Reset interval on manual slide
     slider.addEventListener('transitionend', () => {
         clearInterval(autoSlideInterval);
         autoSlideInterval = setInterval(() => {
             next.click();
-        }, 10000);
+        }, 17000);
     });
     const toggleButton = document.getElementById('toggle-btn');
     const navList = document.getElementById('nav-list');
