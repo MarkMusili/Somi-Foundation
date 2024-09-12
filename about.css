@@ -270,7 +270,7 @@ main {
 
 .item1 {
     grid-column: span 3;
-    height: 100px; /* Add the desired height here */
+    height: 100px;
 }
 .initiatves {
     display: flex;

@@ -255,10 +255,10 @@ button a:hover {
         padding: 0 24px;
     }
 
-    .carousel-item .content {
+    /* .carousel-item .content {
         left: 24px;
         top: 30%;
-    }
+    } */
 
     h1 {font: var(--h1);}
     h2 {font: var(--h2);}
@@ -323,16 +323,16 @@ button a:hover {
     align-items: flex-start;
     gap: 12px;
     position: absolute;
-    top: 40%;
+    bottom: 70%;
     left: 64px;
-    transform: translateY(-40%);
+    transform: translateY(70%);
     /* z-index: 1; */
     box-sizing: border-box;
 }
 @media (max-width: 425px) {
     .content {
-        bottom: 50%;
-        transform: translateY(-50%);
+        /* bottom: 70%;
+        transform: translateY(70%); */
         left: 24px;
     }
 }
