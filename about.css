@@ -366,7 +366,7 @@ main {
     color: var(--primary-color);
 }
 .cta {
-    background: url(Images/Slide1.jpg);
+    background: url(Images/Slide1.webp);
     background-size: cover;
     filter: opacity();
     background-position: center;

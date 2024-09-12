@@ -334,6 +334,10 @@ input, textarea {
 .footer a:hover {
     color: var(--accent-color);
 }
+.social-links {
+    display: flex;
+    gap: 16px;
+}
 @media (max-width:768px) {
     .container img {
         display: none;
