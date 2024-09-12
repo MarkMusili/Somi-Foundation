@@ -330,7 +330,7 @@ button a:hover {
 }
 @media (max-width: 425px) {
     .content {
-        top: 50%;
+        bottom: 50%;
         transform: translateY(-50%);
         left: 24px;
     }
