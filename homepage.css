@@ -396,12 +396,6 @@ button a:hover {
     background-color: var(--secondary-color);
     color: var(--primary-color);
 }
-@media (max-width: 1024px) {
-    .content {
-        top: 30%;
-    }
-
-}
 /* Ensure that the nav is hidden on smaller screens */
 @media (max-width: 768px) {
     nav {

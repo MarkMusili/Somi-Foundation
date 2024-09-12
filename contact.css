@@ -344,4 +344,7 @@ input, textarea {
     .contact-info-body {
         flex-direction: column;
     }
+    .section {
+        padding: 0 24px;
+    }
 }
