@@ -3,7 +3,7 @@
     --primary-color: #111111;
     --secondary-color: #F6F6F6;
     --accent-color: #FFD700;
-    --accent-color-hover: #ddbc00;
+    --accent-color-hover: #ffc600;
     --ff: 'Poppins';
     --H1: bold  53.75px var(--ff);
     --H2: bold 39.81px var(--ff);
@@ -17,6 +17,8 @@
     --p: 16px var(--ff);
     --small:  15px var(--ff);
     --transition: 0.3s ease-in-out;
+    --gradient:  radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%)
+    radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
 }
 h1 {font: var(--H1);}
 h2 {font: var(--H2);}
@@ -239,6 +241,7 @@ main {
 .head {
     text-align: center;
 }
+
 .story {
     display: flex;
     flex-direction: row;
