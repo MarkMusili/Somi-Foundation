@@ -345,6 +345,6 @@ input, textarea {
         flex-direction: column;
     }
     .section {
-        padding: 0 24px;
+        padding: 64px 24px;
     }
 }
