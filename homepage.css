@@ -400,6 +400,84 @@ button a:hover {
     .content {
         top: 30%;
     }
+
+}
+/* Ensure that the nav is hidden on smaller screens */
+@media (max-width: 768px) {
+    nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        backdrop-filter: blur(16px) saturate(158%);
+        -webkit-backdrop-filter: blur(16px) saturate(158%);
+        background-color: rgba(178, 178, 181, 0.14);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 10px;
+        z-index: 1;
+    }
+
+    nav.show {
+        display: flex;
+        justify-content: center;
+    }
+
+    ul {
+        flex-direction: column;
+    }
+
+    .toggle-button {
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        top: 24px;
+        right: 24px;
+    }
+
+    .bar {
+        width: 24px;
+        height: 3px;
+        background-color: var(--secondary-color);
+        margin: 5px 0;
+        transition: 0.3s;
+    }
+
+    .toggle-button.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .toggle-button.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .toggle-button.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    /* Ensure dropdowns open on click/touch in small screens */
+    ul .dropdown {
+        display: none;
+    }
+
+    ul li:hover .dropdown {
+        display: none;
+        /* Disable hover effect on small screens */
+    }
+
+    ul li.active .dropdown {
+        display: block;
+    }
+
+    .section {
+        padding: 0 24px;
+    }
+
+    h1 {font: var(--h1);}
+    h2 {font: var(--h2);}
+    h3 {font: var(--h3);}
+    p {font: var(--P);}
+    a {font: var(--P);}
     .arrows {
         top: 57%;
     }
