@@ -62,12 +62,14 @@ body {
 }
 
 
+
 .section {
     width: 100vw;
     max-width: 1080px;
     margin: auto;
     padding: 0px 64px;
 }
+
 
 a {
     text-decoration: none;
@@ -119,7 +121,6 @@ ul .dropdown {
     position: absolute;
     top: 100%;
     left: 0;
-    /* background-color: white; */
     backdrop-filter: blur(16px) saturate(158%);
     -webkit-backdrop-filter: blur(16px) saturate(158%);
     background-color: rgba(178, 178, 181, 0.14);
@@ -139,8 +140,7 @@ ul .dropdown li a {
 }
 
 ul .dropdown li a:hover {
-    background-color: var(--accent-color);
-    color: var(--primary-color);
+    color: var(--accent-color);
 
 }
 
@@ -345,6 +345,7 @@ button a:hover {
     animation: showContent .5s  1s linear 1 forwards;
 }
 
+
 @keyframes showContent {
     to {
         transform: translateY(0px);
@@ -354,15 +355,15 @@ button a:hover {
 }
 
 .content h1 {
-    animation-delay: 1.2s!important;;
+    animation-delay: 1.0s!important;;
 }
 
 .content p {
-    animation-delay: 1.4s!important;
+    animation-delay: 1.2s!important;
 }
 
 .content .buttons {
-    animation-delay: 1.6s!important;
+    animation-delay: 1.4s!important;
 }
 
 .buttons {

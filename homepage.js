@@ -55,14 +55,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let autoSlideInterval = setInterval(() => {
         next.click();
-    }, 17000);
+    }, 15000);
 
     // Reset interval on manual slide
     slider.addEventListener('transitionend', () => {
         clearInterval(autoSlideInterval);
         autoSlideInterval = setInterval(() => {
             next.click();
-        }, 17000);
+        }, 15000);
     });
 
     // Toggle button logic for mobile menu (no changes here)
