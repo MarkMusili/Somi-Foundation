@@ -134,6 +134,7 @@ header button {
 }
 button {
     padding: 12px 20px;
+    border-radius: 4px;
     border: none;
     background: var(--accent-color);
     margin-left: auto;
@@ -260,7 +261,7 @@ main {
     flex: 1;
 }
 .container img {
-    height: 640px;
+    height: auto;
     width: 100%;
     border-radius: 20px;
 }
@@ -304,6 +305,9 @@ main {
 .initiatves ul {
     margin-bottom: 32px;
 } */
+.item p {
+    text-align: start;
+}
 .container ul {
     flex-direction: column;
     gap: 16px;

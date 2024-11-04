@@ -4,7 +4,7 @@
     --primary-color: #111111;
     --secondary-color: #F6F6F6;
     --accent-color: #FFD700;
-    --accent-color-hover: #ddbc00;
+    --accent-color-hover: #ffc600;
     --ff: 'Poppins';
     --H1: bold 53.75px var(--ff);
     --H2: bold 39.81px var(--ff);
@@ -150,6 +150,7 @@ ul li:hover .dropdown {
 
 button {
     display: flex;
+    border-radius: 4px;
     padding: 12px 20px;
     justify-content: center;
     align-items: center;

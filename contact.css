@@ -3,7 +3,7 @@
     --primary-color: #111111;
     --secondary-color: #F6F6F6;
     --accent-color: #FFD700;
-    --accent-color-hover: #ddbc00;
+    --accent-color-hover: #ffc600;
     --ff: 'Poppins';
     --H1: bold  53.75px var(--ff);
     --H2: bold 39.81px var(--ff);
@@ -129,6 +129,7 @@ header button {
 button {
     padding: 12px 20px;
     border: none;
+    border-radius: 4px;
     background: var(--accent-color);
     margin-left: auto;
     white-space: nowrap;
