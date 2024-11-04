@@ -27,10 +27,10 @@
                 <li>
                     <a href="involve.html">Get Involved</a>
                     <ul class="dropdown">
-                        <li><a href="#partner">Partner</a></li>
-                        <li><a href="#member">Be a Member</a></li>
-                        <li><a href="#volunteer">Volunteer</a></li>
-                        <li><a href="#donate">Donate</a></li>
+                        <li><a href="involve.html#partner">Partner</a></li>
+                        <li><a href="involve.html#member">Be a Member</a></li>
+                        <li><a href="involve.html#volunteer">Volunteer</a></li>
+                        <li><a href="involve.html#donate">Donate</a></li>
                     </ul>
                 </li>
                 <li style="display: flex; align-items: center; gap: 8px;">
@@ -55,13 +55,14 @@
         <section id="form" class="section contact-form">
             <div class="container container-form">
                 <div class="content-text">
-                    <h4>Become a Member</h4>
+                    <h4 style="color: var(--accent-color-hover);">Become a Member</h4>
                     <h2>Join Us at Somi Foundation</h2>
                     <p>Are you interested in becoming a member of the Somi Foundation? Fill out the form below to apply and explore various opportunities we offer.</p>
                 </div>
                 <div class="content-form">
                     <form action="https://api.web3forms.com/submit" id="form" method="POST">
-                        <input type="hidden" name="access_key" value="058b443d-aa9d-4d6f-b8ff-a552be68451d">
+                        <input type="hidden" name="access_key" value="b144e86c-d53b-4b94-a04d-18f3e4c066f0">
+
                         <input type="hidden" name="subject" value="New Membership submission from Somi foundation">
                         <input type="hidden" name="from_name" value="Somi Foundation">
                         <input type="checkbox" name="botcheck" id="botcheck" style="display: none;">
@@ -76,8 +77,9 @@
 
                         <label for="Opportunities">What Opportunities Are you looking for?</label>
                         <select id="Opportunities" name="Opportunities" onchange="showOtherField()" required>
+                            <option value="sponsorship"></option>
                             <option value="sponsorship">Scholarship</option>
-                            <option value="other">Other</option>
+                            <option value="sponsorship">Join the Community</option>
                         </select>
                         <div id="other_field" style="display:none;">
                             <label for="details">If 'Other', please explain further:</label>
@@ -85,16 +87,11 @@
                         </div>
                         <label for="Education">Level Of Education</label>
                         <select id="Education" name="Education" onchange="showOtherField()" required>
+                            <option value="Highschool"></option>
                             <option value="Highschool">Highschool</option>
                             <option value="Undergraduate">Undergraduate</option>
                             <option value="Graduate">Graduate</option>
-                            <option value="other">Other</option>
                         </select>
-
-                        <div id="other_field" style="display:none;">
-                            <label for="details">If 'Other', please explain further:</label>
-                            <input type="text" id="details" name="details" placeholder="Explain further...">
-                        </div>
 
                         <label for="phonenumber">Phone Number:</label>
                         <input type="text" id="phonenumber" name="phonenumber" required>
