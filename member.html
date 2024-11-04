@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="shortcut icon" type="image/webp" href="Images/Favicon.webp"/>
+    <link rel="stylesheet" href="partnership.css">
+</head>
+<body>
+    <header>
+        <a href="homepage.html"><h3>SOMI</h3></a>
+        <nav id="nav-list">
+            <ul>
+                <li><a href="homepage.html">Home</a></li>
+                <li style="display: flex; align-items: center; gap: 8px;">
+                    <a href="about.html">About Us</a>
+                    <ul class="dropdown">
+                        <li>
+                            <a href="#story">Our Story</a>
+                        </li>
+                        <li><a href="about.html#initiatives">What we do</a></li>
+                        <li><a href="about.html#team">The Team</a></li>
+                        <li><a href="about.html#tranding">Gallery</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="involve.html">Get Involved</a>
+                    <ul class="dropdown">
+                        <li><a href="#partner">Partner</a></li>
+                        <li><a href="#member">Be a Member</a></li>
+                        <li><a href="#volunteer">Volunteer</a></li>
+                        <li><a href="#donate">Donate</a></li>
+                    </ul>
+                </li>
+                <li style="display: flex; align-items: center; gap: 8px;">
+                    <a href="contact.html">Contact Us</a>
+                    <ul class="dropdown">
+                        <li><a href="contact.html#form">Contact Form</a></li>
+                        <li><a href="contact.html#info">Contact Information</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <button>
+                <a href="#">Join Us</a>
+            </button>
+        </nav>
+        <div class="toggle-button" id="toggle-btn">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </header>
+    <main>
+        <section id="form" class="section contact-form">
+            <div class="container container-form">
+                <div class="content-text">
+                    <h4>Become a Member</h4>
+                    <h2>Join Us at Somi Foundation</h2>
+                    <p>Are you interested in becoming a member of the Somi Foundation? Fill out the form below to apply and explore various opportunities we offer.</p>
+                </div>
+                <div class="content-form">
+                    <form action="https://api.web3forms.com/submit" id="form" method="POST">
+                        <input type="hidden" name="access_key" value="058b443d-aa9d-4d6f-b8ff-a552be68451d">
+                        <input type="hidden" name="subject" value="New Membership submission from Somi foundation">
+                        <input type="hidden" name="from_name" value="Somi Foundation">
+                        <input type="checkbox" name="botcheck" id="botcheck" style="display: none;">
+
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+
+                        <label for="email">Email Address:</label>
+                        <input type="email" id="email" name="email" required>
+                        <label for="age">Age:</label>
+                        <input type="age" id="age" name="age" required>
+
+                        <label for="Opportunities">What Opportunities Are you looking for?</label>
+                        <select id="Opportunities" name="Opportunities" onchange="showOtherField()" required>
+                            <option value="sponsorship">Scholarship</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <div id="other_field" style="display:none;">
+                            <label for="details">If 'Other', please explain further:</label>
+                            <input type="text" id="details" name="details" placeholder="Explain further...">
+                        </div>
+                        <label for="Education">Level Of Education</label>
+                        <select id="Education" name="Education" onchange="showOtherField()" required>
+                            <option value="Highschool">Highschool</option>
+                            <option value="Undergraduate">Undergraduate</option>
+                            <option value="Graduate">Graduate</option>
+                            <option value="other">Other</option>
+                        </select>
+
+                        <div id="other_field" style="display:none;">
+                            <label for="details">If 'Other', please explain further:</label>
+                            <input type="text" id="details" name="details" placeholder="Explain further...">
+                        </div>
+
+                        <label for="phonenumber">Phone Number:</label>
+                        <input type="text" id="phonenumber" name="phonenumber" required>
+
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" placeholder="Your message" required></textarea>
+
+                        <button type="submit">Submit</button>
+                        <div id="result"></div>
+                    </form>
+                </div>
+            </div>
+            <div class="container">
+                <img src="Images/Slide9.webp" alt="">
+            </div>
+        </section>
+    </main>
+    <footer id="#footer" class="footer">
+        <h2>SOMI</h2>
+        <ul>
+            <li><a href="homepage.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="involve.html">Get Involved</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <div class="social-links">
+            <a href="https://www.tiktok.com/@somi.foundation"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 17 19" fill="none">
+                <path d="M13.2466 3.32C12.5632 2.53953 12.1865 1.5374 12.1866 0.5H9.09664V12.9C9.0733 13.5712 8.79016 14.2071 8.30695 14.6735C7.82374 15.1399 7.17824 15.4004 6.50664 15.4C5.08664 15.4 3.90664 14.24 3.90664 12.8C3.90664 11.08 5.56664 9.79 7.27664 10.32V7.16C3.82664 6.7 0.806641 9.38 0.806641 12.8C0.806641 16.13 3.56664 18.5 6.49664 18.5C9.63664 18.5 12.1866 15.95 12.1866 12.8V6.51C13.4396 7.40985 14.944 7.89265 16.4866 7.89V4.8C16.4866 4.8 14.6066 4.89 13.2466 3.32Z" fill="#F6F6F6"/>
+              </svg></a>
+            <a href="https://www.instagram.com/somi_foundation_/"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 22 25" fill="none">
+                <path d="M6.5476 0.5C3.1873 0.5 0.453125 3.64157 0.453125 7.50125V17.5006C0.453125 21.3598 3.18891 24.5 6.55005 24.5H15.2578C18.6186 24.5 21.3531 21.3584 21.3531 17.4987V7.49844C21.3531 3.63972 18.6173 0.5 15.2562 0.5H6.5476ZM17.1731 4.34C17.6346 4.34 18.0091 4.77008 18.0091 5.3C18.0091 5.82992 17.6346 6.26 17.1731 6.26C16.7117 6.26 16.3371 5.82992 16.3371 5.3C16.3371 4.77008 16.7117 4.34 17.1731 4.34ZM10.9031 6.26C13.9002 6.26 16.3371 9.0584 16.3371 12.5C16.3371 15.9416 13.8998 18.74 10.9031 18.74C7.90606 18.74 5.46912 15.9411 5.46912 12.5C5.46912 9.05888 7.90606 6.26 10.9031 6.26ZM10.9031 8.18C8.82525 8.18 7.14112 10.1139 7.14112 12.5C7.14112 14.8861 8.82525 16.82 10.9031 16.82C12.981 16.82 14.6651 14.8861 14.6651 12.5C14.6651 10.1139 12.981 8.18 10.9031 8.18Z" fill="#FFFED5"/>
+            </svg></a>
+        </div>
+    </footer>
+</body>
+<!-- JavaScript to handle the display of the 'Other' field -->
+<script>
+    // Function to show or hide the 'Other' field based on the selected partnership type
+    function showOtherField() {
+        var partnershipType = document.getElementById("partnership_type").value;
+        var otherField = document.getElementById("other_field");
+
+        if (partnershipType === "other") {
+            otherField.style.display = "block";
+        } else {
+            otherField.style.display = "none";
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+    form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const formData = new FormData(form);
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+    result.innerHTML = "Please wait..."
+
+        fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: json
+            })
+            .then(async (response) => {
+                let json = await response.json();
+                if (response.status == 200) {
+                    result.innerHTML = 'Thank you for reaching out! Your message has been successfully sent. We will get back to you as soon as possible.';
+                } else {
+                    console.log(response);
+                    result.innerHTML = json.message;
+                }
+            })
+            .catch(error => {
+                console.log(error);
+                result.innerHTML = "Something went wrong!";
+            })
+            .then(function() {
+                form.reset();
+                setTimeout(() => {
+                    result.style.display = "none";
+                }, 3000);
+            });
+    });
+    window.onload = function() {
+        // Reset the form fields when the page loads
+        document.getElementById("form").reset();
+    };
+});
+</script>
+
+</html>
